@@ -13,7 +13,14 @@ export async function test(description: string, callback: () => void) {
     await callback();
     console.log(`✅  ${description}`);
   } catch (error) {
-    console.log(`❌  ${description}`);
-    console.log(error.message);
+    console.error(`❌  ${description}`);
+    console.error(error.message);
   }
+}
+
+export const it = test;
+
+export function describe(description: string, callback: () => void) {
+  console.log(description);
+  callback();
 }
