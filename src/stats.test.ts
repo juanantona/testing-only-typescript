@@ -1,5 +1,4 @@
 import { average, sum } from "./stats";
-import { describe, expect, it } from "./testLib";
 import * as asyncStats from "./asyncStats";
 
 describe("Sync tests", () => {
@@ -16,10 +15,10 @@ describe("Sync tests", () => {
   });
 });
 
-describe("Async tests", async () => {
+describe("Async tests", () => {
   it("The async sum of the numbers of the array", async function () {
     const result = await asyncStats.sum([1, 2, 3]);
-    const expected = 5;
+    const expected = 6;
     expect(result).toBe(expected);
   });
 
