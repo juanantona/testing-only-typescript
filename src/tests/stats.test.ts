@@ -1,5 +1,5 @@
-import { average, sum } from "./stats";
-import * as asyncStats from "./asyncStats";
+import { average, sum } from "../stats";
+import * as asyncStats from "../asyncStats";
 
 describe("Sync tests", () => {
   it("The sum of the numbers of the array", function () {
